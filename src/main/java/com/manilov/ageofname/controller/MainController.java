@@ -14,27 +14,25 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200")
+@RequestMapping(value="/api")
 public class MainController {
     @Autowired
     AgeOfNameService ageOfNameService;
-    @RequestMapping ("/")
-    public String mainPage(){
-        return "forward:/frontend/src/app/app.component.html";
-    }
 
     @GetMapping("/getAge/{name}")
     public String getAge(@PathVariable String name) throws IOException {
         ageOfNameService.processNameCount(name);
-        return name+" : "+ageOfNameService.getAge(name);
+        return String.valueOf(ageOfNameService.getAge(name));
     }
+
     @GetMapping("/getStatistics")
-    public String getStatistics() {
-        return ageOfNameService.getNamesCount().toString();
+    public Map<String, Integer> getStatistics() {
+        return ageOfNameService.getNamesCount();
     }
 
     @GetMapping("/getNameWithMaxAge")
-    public String getNameWithMaxAge() {
-        return ageOfNameService.getMax().toString();
+    public Map<String, Integer> getNameWithMaxAge() {
+        return ageOfNameService.getMax();
     }
 
 }

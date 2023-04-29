@@ -1,0 +1,19 @@
+<h1>Welcome to AgeFinder!</h1>
+
+<div class="form-group">
+  <label for="nameInput">Enter name:</label>
+  <br>
+  <input type="text" id="nameInput" [(ngModel)]="name" size="26">
+  <br>
+  <button class="btn btn-primary" (click)="findAge()">Find age</button>
+</div>
+<div *ngIf="isSubmitted">
+  <p>{{enteredName}} is {{age}} years old.</p>
+</div>
+<br>
+<div>
+  <button routerLink="/statistics">
+    Statistics
+  </button>
+
+</div>

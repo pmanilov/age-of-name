@@ -29,7 +29,7 @@ public class AgeOfNameService {
     }
     public Map<String, Integer> getMax() {
         int max = 0;
-        Map<String, Integer> names = namesReader.getNames();
+        Map<String, Integer> names = namesAge;
         List<String> nameList = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : names.entrySet()) {
             String key = entry.getKey();

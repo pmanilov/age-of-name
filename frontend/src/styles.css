@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0e6ff; /* голубой фон */
+  font-family: 'Roboto', sans-serif; /* красивый шрифт */
+}
+
+h1 {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #6b5b95; /* фиолетовый заголовок */
+  font-size: 36px; /* крупный размер шрифта */
+  font-weight: bold; /* жирный шрифт */
+}
+
+p {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #554971; /* темно-фиолетовый текст */
+  font-size: 18px; /* средний размер шрифта */
+  line-height: 1.5; /* межстрочный интервал 1.5 */
+}
+
+button {
+  margin: auto;
+  display: block;
+  text-align: center;
+  background-color: #6b5b95; /* фиолетовая кнопка */
+  color: #fff; /* белый текст на кнопке */
+  font-size: 14px; /* средний размер шрифта на кнопке */
+  border-radius: 4px; /* скругленные углы кнопки */
+  padding: 12px 24px; /* отступы внутри кнопки */
+  border: none; /* убираем границу кнопки */
+  cursor: pointer; /* курсор-указатель при наведении */
+  transition: all 0.3s ease; /* плавное изменение стилей при наведении */
+}
+
+button:hover {
+  background-color: #554971; /* темно-фиолетовый фон кнопки при наведении */
+}
+
+.form-group {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+ul {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+li {
+  color: #5C527F;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #6c63ff;
+  font-size: 24px;
+}
+
+input[type="text"] {
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 1.2em;
+}

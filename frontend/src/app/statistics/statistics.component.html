@@ -1,0 +1,27 @@
+<h1>Statistics</h1>
+  <button (click)="showFrequency()">Show requency of requests</button>
+<div *ngIf="showingFrequency">
+  <h2>Frequency of requests</h2>
+  <ul>
+    <li *ngFor="let entry of frequencyList | keyvalue">
+      {{ entry.key }} : {{ entry.value }}
+    </li>
+  </ul>
+</div>
+  &nbsp;
+  <button (click)="showMaxAge()">Show names with max age</button>
+
+  <div *ngIf="showingMaxAge">
+    <h2>Names with max age</h2>
+    <ul>
+     <li *ngFor="let entry of maxAgeNames | keyvalue">
+       {{ entry.key }} : {{ entry.value }}
+     </li>
+    </ul>
+  </div>
+  <div>
+    <br>
+  <button routerLink="/">
+    Main page
+  </button>
+</div>
